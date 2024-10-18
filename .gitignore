@@ -1,0 +1,11 @@
+# Ignorando los paquetes de las dependencias
+node_modules/
+
+# Ignorando los .json del proyecto
+package-lock.json
+package.json
+
+# Ignorando archivos que generó firebase
+.firebaserc
+firebase.json
+firebase-credentials.json
