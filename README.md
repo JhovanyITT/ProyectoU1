@@ -1,12 +1,12 @@
 # Información del proyecto
-## Nombre del proyecto
+## Nombre
 ProyectoU1
 
-> [!NOTE]
-> El siguinte proyecto cuenta con auntentificación JWT, pruebas de y cada usuario puede visualizar unicamente sus tareas.
-
 ## Descripción del proyecto
-El siguiente proyecto, tiene como objetivo el desarrollar una API que ayude al usuario a llevar el control de tareas, teniendo el estado de completado y descompletado.  
+Este proyecto tiene como objetivo desarrollar una API que permita al usuario gestionar tareas, facilitando el seguimiento de su estado, ya sea completado o pendiente.
+
+> [!NOTE]
+> El siguiente proyecto cuenta con autentificación JWT, pruebas de y cada usuario puede visualizar únicamente sus tareas. 
 
 > [!TIP]
 > Para tener más información del uso del proyecto consulta la documentación en [nuestro página oficial](https://www.youtube.com/watch?v=RDFlV-LF6fY/)

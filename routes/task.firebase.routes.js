@@ -4,8 +4,11 @@ const authenticateToken = require('../middleware/auth.middleware');
 
 const router = express.Router();
 
-// Métodos express, envia los parametros req y res a cada parte programada.
-router.get('/', authenticateToken, taskController.getAllTasks);
-router.post('/', authenticateToken, taskController.createNewTask);
+router.get('/',  taskController.getAllTasks);
+router.get('/:id',  taskController.getTaskByID);
+router.get('/user/:id',  taskController.getAllUserTasks);
+router.post('/',  taskController.createNewTask);
+router.put('/:id', taskController.editTask);
+router.delete('/:id', taskController.deleteTaskByID);
 
 module.exports = router;
