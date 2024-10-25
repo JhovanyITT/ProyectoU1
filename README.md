@@ -9,7 +9,7 @@ Este proyecto tiene como objetivo desarrollar una API que permita al usuario ges
 > El siguiente proyecto cuenta con autentificación JWT, pruebas de y cada usuario puede visualizar únicamente sus tareas. 
 
 > [!TIP]
-> Para tener más información del uso del proyecto consulta la documentación en [nuestro página oficial](https://www.youtube.com/watch?v=RDFlV-LF6fY/)
+> Para tener más información del uso del proyecto consulta la documentación en [nuestro página oficial](https://BaNanoIT.github.io)
 
 > [!IMPORTANT]
 > Para poder usar el proyecto será necesario descargar los siguientes paquetes
@@ -24,4 +24,4 @@ Este proyecto tiene como objetivo desarrollar una API que permita al usuario ges
 - AMARAL DELGADILLO ALDO AZAEL
 - JAIME FERNANDEZ JHOVANY GABRIEL
 - MERCADO SAUCEDA CRISTIAN
-- SANCHEZ TOVAR JESUS ALFREDO
+- SÁNCHEZ TOVAR JESÚS ALFREDO
