@@ -4,12 +4,12 @@ const authenticateToken = require('../middleware/auth.middleware');
 
 const router = express.Router();
 
-router.get('/',  taskController.getAllTasks);
-router.get('/:id',  taskController.getTaskByID);
-router.get('/user/:id',  taskController.getAllUserTasks);
-router.post('/',  taskController.createNewTask);
-router.put('/:id', taskController.editTask);
-router.delete('/:id', taskController.deleteTaskByID);
+router.get('/', authenticateToken,taskController.getAllTasks);
+router.get('/:id',  authenticateToken, taskController.getTaskByID);
+router.get('/user/:id',  authenticateToken, taskController.getAllUserTasks);
+router.post('/',  authenticateToken, taskController.createNewTask);
+router.put('/:id', authenticateToken, taskController.editTask);
+router.delete('/:id', authenticateToken, taskController.deleteTaskByID);
 
 
 module.exports = router;
