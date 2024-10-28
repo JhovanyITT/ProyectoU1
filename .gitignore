@@ -6,6 +6,4 @@ package-lock.json
 package.json
 
 # Ignorando archivos que generó firebase
-.firebaserc
-firebase.json
 firebase-credentials.json
