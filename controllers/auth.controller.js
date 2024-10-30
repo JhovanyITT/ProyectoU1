@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const JWT_SECRET = 'claveSecreta';
 const JWT_EXPIRES_IN = '260s';
 
-async function login(req, res, newUser = null) {
+async function login(req, res, next, newUser = null) {
     const { username, password } = req.body;
     const user = userModel.getUserByUserName(username);
 
@@ -26,7 +26,7 @@ async function login(req, res, newUser = null) {
         res.status(201).json({ "code": 201, "message": "Usuario creado e iniciado sesión", "new-user": newUser, "token": token });
 }
 
-function createUser(req, res) {
+function createUser(req, res, next) {
     try {
         const newUser = userModel.createUser(req.body);
         login(req, res, newUser);

@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');
 const db = require("../connections/firebase.connection");
 
 
@@ -35,17 +36,20 @@ async function getAllUserTasks(userId) {
 }
 
 async function createNewTask(data) {
+    const taskId = uuidv4();
     const newTask = {
-      fk_user_id: data.fk_user_id,
-      title: data.title,
-      body: data.body,
-      creation_date: new Date().toLocaleString(),
-      completed: data.completed
+        fk_user_id: data.fk_user_id,
+        title: data.title,
+        body: data.body,
+        creation_date: new Date().toLocaleString(),
+        completed: data.completed
     };
     
-  const taskRef = await db.collection('tasks').add(newTask);
-    return { id: taskRef.id, ...newTask };
-  }
+    await db.collection('tasks').doc(taskId).set(newTask);
+
+    return { id: taskId, ...newTask };
+}
+
 
 async function editTask(id, data) {
     const taskRef = db.collection('tasks').doc(id);
@@ -54,6 +58,7 @@ async function editTask(id, data) {
 
     const editedTask = {
         ...oldTaskData,
+        fk_user_id: oldTaskData.fk_user_id,
         title: data.title,
         body: data.body,
         completed: data.completed
